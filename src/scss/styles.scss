@@ -1,6 +1,4 @@
-// Variables and Colours
-@import "styles/var";
-
-@import "~bootstrap/scss/bootstrap";
-@import "styles/simple";
-@import "styles/mobile";
+@import './css/bootstrap.min';
+@import './css/default';
+@import './css/responsive';
+@import './css/style';

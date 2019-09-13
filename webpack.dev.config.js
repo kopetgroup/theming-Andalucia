@@ -12,8 +12,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './js/bundle.js',
-    libraryTarget: 'umd'
+    filename: './js/bundle.js'
   },
   module: {
     rules: [
@@ -85,7 +84,7 @@ module.exports = {
   },
   plugins: [
     new UglifyJSPlugin(),
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('./css/styles.css'),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.twig'),
       inject: true,

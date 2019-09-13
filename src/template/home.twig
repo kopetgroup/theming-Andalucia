@@ -1,0 +1,60 @@
+<main class="breadcrumb-area breadcrumb-margin">
+    <section class="blog-area pt-120">
+
+        <!--- BLOG BIASA BLOG BIASA BLOG BIASA BLOG BIASA -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+
+                    {% include "loop.twig" %}
+
+                    <!--- SINGLE AREA HERE SINGLE AREA HERE SINGLE AREA HERE -->
+                    <div class="row mt-50">
+                        <div class="col-xl-8 col-lg-8 col-md-8 mb-15">
+                            <div class="blog-post-tag">
+                                <span>Releted Tags</span>
+                                <a href="#">organic</a>
+                                <a href="#">Foods</a>
+                                <a href="#">tasty</a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 mb-15">
+                            <div class="blog-share-icon text-left text-md-right">
+                                <span>Share: </span>
+                                <a href="#"><i class="fa fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fa fa-vimeo-v"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--- SINGLE AREA END SINGLE AREA END SINGLE AREA END SINGLE AREA END -->
+
+                    <!-- PAGINASI PAGINASI PAGINASI  -->
+                    <div class="basic-pagination basic-pagination-2 mb-40">
+                        <ul>
+                            {% for row in range(1, 8) %}
+                            {% if loop.index == 2 %}
+                            <li class="active"><a href="#">{{loop.index}}</a></li>
+                            {% endif %}
+                            <li><a href="#">{{loop.index}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <!-- PAGINASI PAGINASI PAGINASI  -->
+
+
+                </div>
+                <div class="col-lg-4">
+                    {% include "sidebar.twig" %}
+                </div>
+            </div>
+        </div>
+        <!--- BLOG BIASA BLOG BIASA BLOG BIASA BLOG BIASA -->
+
+        <!--- ATTACHMENT OK ATTACHMENT OK ATTACHMENT OK -->
+        {% include "attachment.twig" %}
+        <!--- ATTACHMENT OK ATTACHMENT OK ATTACHMENT OK -->
+    </section>
+</main>
